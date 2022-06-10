@@ -68,3 +68,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+----------
+Este proyecto está pensado como un ecommerce básico, la idea es ofrecer distintos paquetes turísticos a destinos nacionales. 
+Para ello, se crearon distintos componentes, siendo el principal de ellos el llamado CarritoCompras.js, ya que en el confluyen los elementos dinámicos del carrito. Está conformado por dos div, el primero hace un map por el contenido del array productos (cuyo contenido se encuentra en compraReducers.js y la estructura en Productos.js), y el segundo div corresponde a los productos ya seleccionados, que también realiza un map pero esta vez del array carrito (que se encuentra también en compraReducers.js). 
+La última parte de la página simula ser un login, que solicita el nombre y correo electrónico, por el momento no tiene persistencia, solo es visual.
+En términos generales, decidí utilizar reducers ya que lo consideré útil para manejar los estados y las funcionalidades que debía tener el carrito, por ello cree el accionesCarrito.js donde definí los types, y y luego creé los eventos en compraReducers.js utilizando switch.
+Al ingresar, el usuario decide cuál de los paquetes comprar, cada click que haga sobre el boton agregar, ejecuta la funcion agregarCarrito, que suma 1 persona al total, visualizando la sumatoria a la derecha (ProductosElegidos.js).
